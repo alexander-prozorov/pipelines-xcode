@@ -12,18 +12,6 @@ pool:
 steps:
 - task: InstallAppleCertificate@2
   inputs:
-    certSecureFile: '001.p12'
-    keychain: 'temp'
-- task: InstallAppleCertificate@2
-  inputs:
-    certSecureFile: '003.p12'
-    keychain: 'temp'
-- task: InstallAppleCertificate@2
-  inputs:
-    certSecureFile: '002.p12'
-    keychain: 'temp'
-- task: InstallAppleCertificate@2
-  inputs:
     certSecureFile: 'x-dev-p12.p12'
     keychain: 'temp'
 - task: InstallAppleProvisioningProfile@1
