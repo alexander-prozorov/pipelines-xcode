@@ -1,0 +1,44 @@
+# Xcode
+# Build, test, and archive an Xcode workspace on macOS.
+# Add steps that install certificates, test, sign, and distribute an app, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
+
+trigger:
+- master
+
+pool:
+  vmImage: 'macos-latest'
+
+steps:
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: '001.p12'
+    keychain: 'temp'
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: '003.p12'
+    keychain: 'temp'
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: '002.p12'
+    keychain: 'temp'
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: 'x-dev-p12.p12'
+    keychain: 'temp'
+- task: InstallAppleProvisioningProfile@1
+  inputs:
+    provisioningProfileLocation: 'secureFiles'
+    provProfileSecureFile: 'x.mobileprovision'
+- task: Xcode@5
+  inputs:
+    actions: 'clean build'
+    configuration: 'Release'
+    sdk: 'iphoneos'
+    xcWorkspacePath: '**/x.xcworkspace'
+    scheme: 'X'
+    packageApp: true
+    archivePath: 'output/ipa'
+    signingOption: 'auto'
+    teamId: 'x'
+    args: '-UseModernBuildSystem=NO'
