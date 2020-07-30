@@ -10,23 +10,12 @@ pool:
   vmImage: 'macos-latest'
 
 steps:
-- task: InstallAppleCertificate@2
-  inputs:
-    certSecureFile: 'x-dev-p12.p12'
-    keychain: 'temp'
-- task: InstallAppleProvisioningProfile@1
-  inputs:
-    provisioningProfileLocation: 'secureFiles'
-    provProfileSecureFile: 'x.mobileprovision'
 - task: Xcode@5
   inputs:
     actions: 'clean build'
     configuration: 'Release'
     sdk: 'iphoneos'
-    xcWorkspacePath: '**/x.xcworkspace'
-    scheme: 'X'
+    xcWorkspacePath: './iOSHelloWorld.xcodeproj/project.xcworkspace'
     packageApp: true
     archivePath: 'output/ipa'
-    signingOption: 'auto'
-    teamId: 'x'
     args: '-UseModernBuildSystem=NO'
