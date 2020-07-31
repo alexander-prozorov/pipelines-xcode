@@ -24,6 +24,7 @@ steps:
     actions: 'clean build'
     configuration: 'Release'
     sdk: 'iphoneos'
+    signingOption: 'auto'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     scheme: ''
     args: '-UseModernBuildSystem=NO'
