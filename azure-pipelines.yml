@@ -28,7 +28,6 @@ steps:
     scheme: ''
     packageApp: true
     archivePath: 'output/ipa'
-    signingOption: 'auto'
     args: '-UseModernBuildSystem=NO'
 
 - task: CopyFiles@2
