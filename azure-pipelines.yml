@@ -27,7 +27,6 @@ steps:
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     scheme: ''
     packageApp: true
-    archivePath: 'output/ipa'
     args: '-UseModernBuildSystem=NO'
 
 - task: CopyFiles@2
