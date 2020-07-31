@@ -15,18 +15,13 @@ steps:
     provProfileSecureFile: '0303da7e-954f-4d35-b578-e4c39669cd8a'
 
 - task: Xcode@5
-  displayName: 'Xcode test'
   inputs:
-    actions: test
-    configuration: '$(TestConfiguration)'
-    sdk: '$(TestSDK)'
-    xcWorkspacePath: '$(Parameters.xcWorkspacePath)'
-    scheme: '$(Parameters.scheme)'
-    xcodeVersion: '$(Parameters.xcodeVersion)'
-    signingOption: default
-    destinationPlatformOption: iOS
-    publishJUnitResults: true
-  enabled: false
+    actions: 'build'
+    scheme: ''
+    sdk: 'iphoneos'
+    configuration: 'Release'
+    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
+    xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
 
 - task: Xcode@5
   displayName: 'Xcode build'
