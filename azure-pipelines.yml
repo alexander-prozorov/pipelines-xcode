@@ -24,7 +24,8 @@ steps:
     actions: 'clean build'
     configuration: 'Release'
     sdk: 'iphoneos'
-    xcWorkspacePath: '**/x.xcworkspace'
+    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
+    scheme: ''
     packageApp: true
     archivePath: 'output/ipa'
     signingOption: 'auto'
