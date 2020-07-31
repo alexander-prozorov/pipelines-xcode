@@ -5,13 +5,13 @@ steps:
 - task: InstallAppleCertificate@2
   displayName: 'Install an Apple certificate'
   inputs:
-    certSecureFile: 'aa0eee1d-b19f-4b15-bcd5-197f0592efb5'
+    certSecureFile: 'Certificates.p12'
     certPwd: '$(P12password)'
 
 - task: InstallAppleProvisioningProfile@1
   displayName: 'Install an Apple provisioning profile'
   inputs:
-    provProfileSecureFile: '0303da7e-954f-4d35-b578-e4c39669cd8a'
+    provProfileSecureFile: 'abttxamarintestapp.mobileprovision'
 
 - task: Xcode@5
   inputs:
