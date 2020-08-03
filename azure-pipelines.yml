@@ -13,7 +13,7 @@ steps:
   displayName: 'Install an Apple provisioning profile'
   inputs:
     provisioningProfileLocation: 'secureFiles'
-    provProfileSecureFile: 'abttxamarintestapp.mobileprovision'
+    provProfileSecureFile: 'abttxamarintestappdev.mobileprovision'
 
 - task: Xcode@5
   inputs:
