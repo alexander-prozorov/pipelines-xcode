@@ -21,7 +21,7 @@ steps:
     signingOption: 'auto'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     scheme: ''
-    teamId: 'XW3HA8RB4D'
+    teamId: '$(teamId)'
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
