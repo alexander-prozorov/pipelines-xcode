@@ -22,6 +22,7 @@ steps:
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     scheme: ''
     teamId: '$(teamId)'
+    args: '-allowProvisioningUpdates'
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
