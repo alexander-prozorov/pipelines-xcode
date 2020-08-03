@@ -20,7 +20,7 @@ steps:
     actions: 'clean build'
     configuration: 'Release'
     sdk: 'iphoneos'
-    signingOption: 'auto'
+    signingOption: 'manual'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     scheme: ''
     teamId: '$(teamId)'
