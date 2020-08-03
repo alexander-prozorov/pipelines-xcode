@@ -24,7 +24,6 @@ steps:
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     scheme: ''
     teamId: '$(teamId)'
-    args: '-UseModernBuildSystem=NO'
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
