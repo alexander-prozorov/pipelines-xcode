@@ -23,7 +23,6 @@ steps:
     signingOption: 'auto'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     scheme: ''
-    teamId: '$(teamId)'
     destinationPlatform: 'iOS'
     args: '-allowProvisioningUpdates'
 - task: CopyFiles@2
