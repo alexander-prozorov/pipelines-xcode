@@ -45,12 +45,3 @@ steps:
     appFile: '**/*.ipa'
   enabled: false
   condition: succeededOrFailed()
-
-- task: AppCenterDistribute@2
-  displayName: 'Deploy **/*.ipa to Visual Studio App Center'
-  inputs:
-    appFile: '**/*.ipa'
-    symbolsIncludeParentDirectory: false
-  enabled: false
-  condition: succeededOrFailed()
-
