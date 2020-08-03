@@ -5,12 +5,6 @@ steps:
 - task: InstallAppleCertificate@2
   displayName: 'Install an Apple certificate'
   inputs:
-    certSecureFile: 'Certificates-Dev.p12'
-    certPwd: '$(P12password)'
-
-- task: InstallAppleCertificate@2
-  displayName: 'Install an Apple certificate'
-  inputs:
     certSecureFile: 'Certificates.p12'
     certPwd: '$(P12password)'
 
@@ -27,7 +21,6 @@ steps:
     signingOption: 'auto'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     scheme: ''
-    args: '-UseModernBuildSystem=NO'
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
