@@ -26,5 +26,5 @@ steps:
     signingOption: 'auto'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     scheme: ''
-    args: '-allowProvisioningUpdates'
+    args: '-allowProvisioningUpdates -UseModernBuildSystem=NO'
     teamId: '$(team.ID)'
