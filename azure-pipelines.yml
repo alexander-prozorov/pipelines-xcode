@@ -23,6 +23,7 @@ steps:
     actions: 'clean build'
     configuration: 'Release'
     sdk: 'iphoneos'
+    xcodeVersion: '10'
     signingOption: 'auto'
     provisioningProfileUuid: '$(provisioning_profile.id)'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
