@@ -16,14 +16,14 @@ steps:
   displayName: 'Install an Apple provisioning profile'
   inputs:
     provisioningProfileLocation: 'secureFiles'
-    provProfileSecureFile: 'abbttestapp.mobileprovision'
+    provProfileSecureFile: 'abbttest-app.mobileprovision'
 
 - task: Xcode@5
   inputs:
     actions: 'clean build'
     configuration: 'Release'
     sdk: 'iphoneos'
-    xcodeVersion: '10'
+    xcodeVersion: '9'
     signingOption: 'auto'
     provisioningProfileUuid: '$(provisioning_profile.id)'
     xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
