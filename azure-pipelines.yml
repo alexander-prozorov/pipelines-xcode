@@ -3,14 +3,14 @@ pool:
   
 steps:
 - task: InstallAppleCertificate@2
-  displayName: 'Install an Apple certificate'
+  displayName: 'Install an Apple certificate 1'
   inputs:
     certSecureFile: 'cert1.p12'
     certPwd: '$(cert_pwd)'
     keychain: 'temp'
     
 - task: InstallAppleCertificate@2
-  displayName: 'Install an Apple certificate'
+  displayName: 'Install an Apple certificate 2'
   inputs:
     certSecureFile: 'cert2.p12'
     certPwd: '$(cert_pwd)'
