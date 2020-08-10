@@ -11,6 +11,14 @@ steps:
     certSecureFile: 'Certificates-Dev.p12'
     certPwd: '$(certificate.password)'
     keychain: 'temp'
+    
+- task: InstallAppleCertificate@2
+  displayName: 'Install an Apple certificate'
+  inputs:
+    certSecureFile: 'Certificates-Dev.p12'
+    certPwd: '$(certificate.password)'
+    keychain: 'temp'
+
 
 - task: InstallAppleProvisioningProfile@1
   displayName: 'Install an Apple provisioning profile'
