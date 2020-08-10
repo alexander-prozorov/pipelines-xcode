@@ -1,39 +1,17 @@
 pool:
   vmImage: 'macos-latest'
   
-variables:
-- group: AppSigning
-
 steps:
 - task: InstallAppleCertificate@2
   displayName: 'Install an Apple certificate'
   inputs:
-    certSecureFile: 'Certificates-Dev.p12'
-    certPwd: '$(certificate.password)'
+    certSecureFile: 'cert1.p12'
+    certPwd: '$(cert_pwd)'
     keychain: 'temp'
     
 - task: InstallAppleCertificate@2
   displayName: 'Install an Apple certificate'
   inputs:
-    certSecureFile: 'Certificates-Dev.p12'
-    certPwd: '$(certificate.password)'
+    certSecureFile: 'cert2.p12'
+    certPwd: '$(cert_pwd)'
     keychain: 'temp'
-
-
-- task: InstallAppleProvisioningProfile@1
-  displayName: 'Install an Apple provisioning profile'
-  inputs:
-    provisioningProfileLocation: 'secureFiles'
-    provProfileSecureFile: 'abbttestapp.mobileprovision'
-
-- task: Xcode@5
-  inputs:
-    actions: 'clean build'
-    configuration: 'Release'
-    sdk: 'iphoneos'
-    signingOption: 'manual'
-    provisioningProfileUuid: '$(provisioning_profile.id)'
-    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
-    scheme: ''
-    args: '-allowProvisioningUpdates'
-    teamId: '$(team.ID)'
