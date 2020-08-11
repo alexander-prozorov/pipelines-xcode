@@ -1,5 +1,4 @@
-pool:
-  vmImage: 'macos-latest'
+pool: v-aprozo
   
 steps:
 - task: InstallAppleCertificate@2
