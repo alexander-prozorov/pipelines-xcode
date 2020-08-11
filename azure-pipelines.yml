@@ -13,5 +13,5 @@ steps:
   displayName: 'Install an Apple certificate 2'
   inputs:
     certSecureFile: 'cert2.p12'
-    certPwd: '$(cert1_pwd)'
+    certPwd: '$(cert2_pwd)'
     keychain: 'temp'
