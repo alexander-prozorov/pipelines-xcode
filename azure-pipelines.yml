@@ -1,6 +1,12 @@
 pool: v-aprozo
   
 steps:
+- task: InstallAppleCertificate@2
+  displayName: 'Install an Apple certificate 1'
+  inputs:
+    certSecureFile: 'cert1.p12'
+    certPwd: '$(cert1_pwd)'
+    keychain: 'temp'
     
 - task: InstallAppleCertificate@2
   displayName: 'Install an Apple certificate 2'
