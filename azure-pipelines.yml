@@ -1,4 +1,17 @@
-pool: v-aprozo
+pool: 
+  vmImage: 'macos-latest'
+
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: 'Certificates_test1.p12'
+    certPwd: '$(password1)'
+    keychain: 'temp'
+
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: 'Certificates_test2.p12'
+    certPwd: '$(password2)'
+    keychain: 'temp'
   
 steps:
 - task: Xcode@5
