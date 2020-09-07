@@ -1,6 +1,8 @@
 pool: 
   vmImage: 'macos-latest'
-
+  
+steps:
+    
 - task: InstallAppleCertificate@2
   inputs:
     certSecureFile: 'Certificates_test1.p12'
@@ -12,8 +14,13 @@ pool:
     certSecureFile: 'Certificates_test2.p12'
     certPwd: '$(password2)'
     keychain: 'temp'
-  
-steps:
+
+- task: InstallAppleProvisioningProfile@1
+  inputs:
+    provisioningProfileLocation: 'secureFiles'
+    provProfileSecureFile: 'abttxamarintestapp.mobileprovision'
+    removeProfile: false
+    
 - task: Xcode@5
   inputs:
     actions: 'build'
