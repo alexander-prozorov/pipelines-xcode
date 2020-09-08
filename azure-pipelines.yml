@@ -70,9 +70,9 @@ jobs:
         provisioningProfileLocation: 'secureFiles'
         provProfileSecureFile: 'abttxamarintestapp.mobileprovision'
         removeProfile: false
-
-    - task: Xcode@5
+    
+    - task: InstallAppleProvisioningProfile@1
       inputs:
-        actions: 'build'
-        sdk: 
-        packageApp: false
+        provisioningProfileLocation: 'secureFiles'
+        provProfileSecureFile: 'abttxamarintestapp.mobileprovision'
+        removeProfile: false
