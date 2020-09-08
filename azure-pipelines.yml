@@ -1,5 +1,4 @@
-pool: 
-  vmImage: 'macos-latest'
+pool: v-aprozo
 
 jobs:
   - job: 'Apps'
@@ -60,6 +59,12 @@ jobs:
         certPwd: '$(password2)'
         keychain: 'temp'
 
+    - task: InstallAppleProvisioningProfile@1
+      inputs:
+        provisioningProfileLocation: 'secureFiles'
+        provProfileSecureFile: 'abttxamarintestapp.mobileprovision'
+        removeProfile: false
+    
     - task: InstallAppleProvisioningProfile@1
       inputs:
         provisioningProfileLocation: 'secureFiles'
