@@ -1,6 +1,8 @@
-pool: v-aprozo
+pool: 
+  vmImage: 'macos-latest'
+
 jobs:
-  - job: 'App1'
+  - job: 'Apps'
     strategy:
       matrix:
         app1:
