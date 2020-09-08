@@ -23,6 +23,26 @@ jobs:
           APP_NAME: 'app9'
         app10:
           APP_NAME: 'app10'
+        app11:
+          APP_NAME: 'app11'
+        app12:
+          APP_NAME: 'app12'
+        app13:
+          APP_NAME: 'app13'
+        app14:
+          APP_NAME: 'app14'
+        app15:
+          APP_NAME: 'app15'
+        app16:
+          APP_NAME: 'app16'
+        app17:
+          APP_NAME: 'app17'
+        app18:
+          APP_NAME: 'app18'
+        app19:
+          APP_NAME: 'app19'
+        app20:
+          APP_NAME: 'app20'
           
     steps:
 
