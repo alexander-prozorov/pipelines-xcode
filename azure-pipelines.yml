@@ -20,7 +20,9 @@ steps:
     provisioningProfileLocation: 'secureFiles'
     provProfileSecureFile: 'abttxamarintestapp.mobileprovision'
     removeProfile: false
+
 - task: Xcode@5
   inputs:
     actions: 'build'
+    sdk: 
     packageApp: false
