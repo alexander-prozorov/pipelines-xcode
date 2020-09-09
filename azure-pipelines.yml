@@ -1,4 +1,5 @@
-pool: v-aprozo
+pool:
+  vmImage: 'macos-latest'
 
 jobs:
   - job: 'Apps'
