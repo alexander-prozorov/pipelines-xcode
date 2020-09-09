@@ -12,6 +12,7 @@ jobs:
         certPwd: '$(password1)'
         keychain: 'custom'
         keychainPassword: '$(keychain_password)'
+        customKeychainPath: './customKeychain'
 
     - task: InstallAppleCertificate@2
       inputs:
@@ -19,3 +20,4 @@ jobs:
         certPwd: '$(password2)'
         keychain: 'custom'
         keychainPassword: '$(keychain_password)'
+        customKeychainPath: './customKeychain'
