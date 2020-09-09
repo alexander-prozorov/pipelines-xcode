@@ -3,48 +3,6 @@ pool:
 
 jobs:
   - job: 'Apps'
-    strategy:
-      matrix:
-        app1:
-          APP_NAME: 'app1'
-        app2:
-          APP_NAME: 'app2'
-        app3:
-          APP_NAME: 'app3'
-        app4:
-          APP_NAME: 'app4'
-        app5:
-          APP_NAME: 'app5'
-        app6:
-          APP_NAME: 'app6'
-        app7:
-          APP_NAME: 'app7'
-        app8:
-          APP_NAME: 'app8'
-        app9:
-          APP_NAME: 'app9'
-        app10:
-          APP_NAME: 'app10'
-        app11:
-          APP_NAME: 'app11'
-        app12:
-          APP_NAME: 'app12'
-        app13:
-          APP_NAME: 'app13'
-        app14:
-          APP_NAME: 'app14'
-        app15:
-          APP_NAME: 'app15'
-        app16:
-          APP_NAME: 'app16'
-        app17:
-          APP_NAME: 'app17'
-        app18:
-          APP_NAME: 'app18'
-        app19:
-          APP_NAME: 'app19'
-        app20:
-          APP_NAME: 'app20'
           
     steps:
 
@@ -52,28 +10,12 @@ jobs:
       inputs:
         certSecureFile: 'cert1.p12'
         certPwd: '$(password1)'
-        keychain: 'temp'
+        keychain: 'custom'
+        keychainPassword: '$(keychain_password)'
 
     - task: InstallAppleCertificate@2
       inputs:
         certSecureFile: 'cert2.p12'
         certPwd: '$(password2)'
-        keychain: 'temp'
-
-    - task: InstallAppleProvisioningProfile@1
-      inputs:
-        provisioningProfileLocation: 'secureFiles'
-        provProfileSecureFile: 'abttxamarintestapp.mobileprovision'
-        removeProfile: false
-    
-    - task: InstallAppleProvisioningProfile@1
-      inputs:
-        provisioningProfileLocation: 'secureFiles'
-        provProfileSecureFile: 'abttxamarintestapp.mobileprovision'
-        removeProfile: false
-    
-    - task: InstallAppleProvisioningProfile@1
-      inputs:
-        provisioningProfileLocation: 'secureFiles'
-        provProfileSecureFile: 'abttxamarintestapp.mobileprovision'
-        removeProfile: false
+        keychain: 'custom'
+        keychainPassword: '$(keychain_password)'
