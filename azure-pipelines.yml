@@ -6,16 +6,6 @@ jobs:
           
     steps:
 
-    - task: InstallAppleCertificate@2
+    - task: DownloadSecureFile@1
       inputs:
-        certSecureFile: 'cert1.p12'
-        certPwd: '$(password1)'
-        keychain: 'temp'
-        keychainPassword: '$(keychain_password)'
-
-    - task: InstallAppleCertificate@2
-      inputs:
-        certSecureFile: 'cert2.p12'
-        certPwd: '$(password2)'
-        keychain: 'temp'
-        keychainPassword: '$(keychain_password)'
+        secureFile: 'cert1.p12'
