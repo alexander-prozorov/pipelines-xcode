@@ -17,6 +17,6 @@ steps:
     sdk: 'iphoneos'
     xcodeVersion: '10'
     packageApp: false
-    destinationPlatformOption: 'iOS'
+    destinationPlatformOption: 'tvOS'
     destinationSimulators: 'iPhone 8'
 
