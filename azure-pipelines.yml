@@ -13,6 +13,7 @@ steps:
 - task: XcodeSimulators@5
   inputs:
     actions: 'build'
+    sdk: 'iphoneos'
     xcodeVersion: '11'
     packageApp: false
     destinationPlatformOption: 'iOS'
