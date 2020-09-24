@@ -16,5 +16,5 @@ steps:
     sdk: 'iphoneos'
     packageApp: false
     destinationPlatformOption: 'iOS'
-    destinationSimulators: 'iPhone X'
+    destinationSimulators: 'iPhone 8,OS=13.7'
 
