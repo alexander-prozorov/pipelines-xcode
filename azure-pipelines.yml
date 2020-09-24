@@ -14,8 +14,7 @@ steps:
   inputs:
     actions: 'build'
     sdk: 'iphoneos'
-    xcodeVersion: '11'
     packageApp: false
     destinationPlatformOption: 'iOS'
-    destinationSimulators: 'iPhone X,OS=13.7'
+    destinationSimulators: 'iPhone X'
 
