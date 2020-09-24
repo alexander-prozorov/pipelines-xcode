@@ -17,5 +17,5 @@ steps:
     xcodeVersion: '11'
     packageApp: false
     destinationPlatformOption: 'iOS'
-    destinationSimulators: 'iPhone X,OS=11.1'
+    destinationSimulators: 'iPhone X,OS=13.7'
 
