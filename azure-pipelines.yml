@@ -17,4 +17,5 @@ steps:
     packageApp: false
     destinationPlatformOption: 'custom'
     destinationPlatform: 'iOS'
+    destinationSimulators: 'iPhone 11'
 
