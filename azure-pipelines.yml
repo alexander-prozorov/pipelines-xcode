@@ -15,6 +15,6 @@ steps:
     actions: 'build'
     sdk: 'iphoneos'
     packageApp: false
-    destinationPlatformOption: 'custom'
-    destinationPlatform: 'iOS'
+    destinationPlatformOption: 'iOS'
+    destinationSimulators: 'iPhone 11'
 
