@@ -17,4 +17,3 @@ steps:
     xcodeVersion: '10'
     packageApp: false
     destinationPlatformOption: 'iOS'
-    destinationSimulators: 'iPhone 8'
