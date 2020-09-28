@@ -14,7 +14,7 @@ steps:
   inputs:
     actions: 'build'
     sdk: 'iphoneos'
-    xcodeVersion: '9'
+    xcodeVersion: '10'
     packageApp: false
     destinationPlatformOption: 'iOS'
     destinationSimulators: 'iPhone 8'
