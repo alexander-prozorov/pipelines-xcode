@@ -14,5 +14,6 @@ steps:
   inputs:
     actions: 'build'
     sdk: 'iphoneos'
+    xcodeVersion: '10'
     packageApp: false
     destinationPlatformOption: 'iOS'
