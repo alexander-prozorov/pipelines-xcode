@@ -17,3 +17,4 @@ steps:
     xcodeVersion: '11'
     packageApp: false
     destinationPlatformOption: 'iOS'
+    destinationSimulators: ' '
